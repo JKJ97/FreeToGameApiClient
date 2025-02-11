@@ -1,18 +1,21 @@
-
 var builder = WebApplication.CreateBuilder(args);
 
-// CORS for cross resource sharing
 builder.Services.AddCors(options =>
 {
     options.AddPolicy("AllowAll",
-        policy => policy.AllowAnyOrigin().AllowAnyMethod().AllowAnyHeader());
+        policy => policy.AllowAnyOrigin()
+                        .AllowAnyMethod()
+                        .AllowAnyHeader());
 });
 
 builder.Services.AddControllers();
+builder.Services.AddEndpointsApiExplorer();
+builder.Services.AddSwaggerGen();
 
 var app = builder.Build();
 
-app.UseCors("AllowAll");  
+app.UseCors("AllowAll");
 app.UseAuthorization();
+app.UseStaticFiles();
 app.MapControllers();
 app.Run();

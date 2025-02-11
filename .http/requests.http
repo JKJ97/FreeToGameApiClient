@@ -1,0 +1,23 @@
+### Get All Games
+GET http://localhost:5099/api/games/all
+Accept: application/json
+
+### Get Game by ID 
+GET http://localhost:5099/api/games/452
+Accept: application/json
+
+### Get Games by Category (mmorpg, shooter, strategy, moba, racing, sports, social, sandbox...)
+GET http://localhost:5099/api/games?category=Shooter
+Accept: application/json
+
+### Get Games by Platform (pc, browser, all)
+GET http://localhost:5099/api/games?platform=pc
+Accept: application/json
+
+### Get Games by Category & Platform
+GET http://localhost:5099/api/games?category=MMORPG&platform=all
+Accept: application/json
+
+### Get Games by Category, Platform & Sort Order (release-date, popularity, alphabetical or relevance)
+GET http://localhost:5099/api/games?category=MMORPG&platform=pc&sortBy=release-date
+Accept: application/json
