@@ -3,5 +3,6 @@ obj/
 
 .vscode/
 
+FreeToGameApi.sln
 appsettings.json
 appsettings.Development.json
