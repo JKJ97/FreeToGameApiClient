@@ -1,0 +1,2 @@
+# FreeToGameApiClient
+FreeToGame API Client
